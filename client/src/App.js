@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import { useContext } from "react";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+import { AuthContext } from "./context/AuthContext";
+
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import ForgetPassword from "./pages/ForgetPassword/ForgetPassword";
+
 import './App.css';
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
+  const {user}=useContext(AuthContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route exact path="/">
+          {user ? <Home/> : <Register/>}
+        </Route>
+        <Route path="/login">
+          {user ? <Redirect to="/"/> :<Login/>}
+        </Route>
+        <Route path="/register">
+          {user ? <Redirect to="/"/> :<Register/>}
+        </Route>
+        <Route path="/forget">
+          {user ? <Redirect to="/"/> :<ForgetPassword/>}
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

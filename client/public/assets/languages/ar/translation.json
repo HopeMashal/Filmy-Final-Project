@@ -1,0 +1,21 @@
+{
+  "app_title": "فيلمي",
+  "language": "اللغة",
+  "login-text": "تسجيل الدخول",
+  "disc-logo-text": "استمتع وشاهد أفلام ممتعة مشيقة على فيلمي",
+  "signup-text":"اشترك",
+  "log-into-account-text":"سجل الدخول الى حسابك",
+  "home-text":"الصفحة الرئيسية",
+  "popular-text":"شعبي",
+  "logout-text":"تسجيل الخروج",
+  "enter-name":"أدخل اسمك",
+  "enter-email":"أدخل بريدك الالكتروني",
+  "enter-password":"أدخل كلمة السر",
+  "enter-repeat-pass":"كرر كلمة السر مجدداً",
+  "forgot-pass-text":"نسيت كلمة السر؟",
+  "create-acc-text":"انشاء حساب جديد",
+  "search-move":"ابحث عن الأفلام",
+  "enter-new-password":"أدخل كلمة السر الجديدة",
+  "enter-new-repeat-pass":"كرر كلمة السر الجديدة مجدداً",
+  "change-pass":"تغيير كلمة السر"
+}

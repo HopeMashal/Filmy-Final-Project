@@ -1,0 +1,21 @@
+{
+  "app_title": "Filmy",
+  "language": "Language",
+  "login-text": "Login",
+  "disc-logo-text": "Have Fun and watch interesting movies on Filmy.",
+  "signup-text":"Sign Up",
+  "log-into-account-text":"Log into Account",
+  "home-text":"Home",
+  "popular-text":"Popular",
+  "logout-text":"Logout",
+  "enter-name":"Enter Your Name",
+  "enter-email":"Enter Your Email",
+  "enter-password":"Enter Your Password",
+  "enter-repeat-pass":"Repeat Your Password",
+  "forgot-pass-text":"Forgot Password?",
+  "create-acc-text":"Create a New Account",
+  "search-move":"Search for movies",
+  "enter-new-password":"Enter Your New Password",
+  "enter-new-repeat-pass":"Repeat Your New Password",
+  "change-pass":"Change Password"
+}

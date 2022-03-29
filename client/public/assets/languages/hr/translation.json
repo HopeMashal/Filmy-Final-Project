@@ -1,0 +1,21 @@
+{
+  "app_title": "סרט",
+  "language": "שפה",
+  "login-text": "התחבר",
+  "disc-logo-text": "תהנה ותראה סרטים מעניינים בסרט",
+  "signup-text":"הירשם",
+  "log-into-account-text":"התחבר לחשבון",
+  "home-text":"דף הבית",
+  "popular-text":"פופולרי",
+  "logout-text":"יציאה",
+  "enter-name":"הזן את שמך",
+  "enter-email":"הזן את האימייל שלך",
+  "enter-password":"הזן את הסיסמה שלך",
+  "enter-repeat-pass":"חזור על הסיסמה שלך",
+  "forgot-pass-text":"שכחת סיסמה?",
+  "create-acc-text":"צור חשבון חדש",
+  "search-move":"חפש סרטים ",
+  "enter-new-password":"הזן את הסיסמה החדשה שלך",
+  "enter-new-repeat-pass":"חזור על הסיסמה החדשה שלך",
+  "change-pass":"שנה סיסמה"
+}

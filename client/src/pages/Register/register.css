@@ -1,0 +1,102 @@
+.register{
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background-color: var(--register-login-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerWrapper{
+  width:80%;
+  height: 70%;
+  display: flex;
+}
+
+.registerRight,.registerLeft{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registerRight{
+  align-items: flex-end;
+}
+
+.registerLeft{
+  flex-direction: row;
+  align-items: center;
+}
+
+.registerIcon{
+  width:200px;
+  margin-right: 20px;
+}
+
+.registerLogo{
+  font-size: 50px;
+  font-weight: 500;
+  color:var(--register-login-logo-color);
+  font-family: 'Moo Lah Lah', cursive;
+  margin-bottom: 10px;
+}
+
+.registerDesc{
+  font-size: 21px;
+  font-family: 'Lobster', cursive;
+  text-align:justify;
+}
+
+.registerBox{
+  width: 80%;
+  height: 400px;
+  padding: 20px;
+  background-color: var(--register-login-box-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.registerInput{
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding: 0 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.registerInput:focus{
+  outline: none;
+}
+
+.registerButton,.registerLoginButton{
+  height: 50px;
+  border-radius: 10px;
+  border:none;
+  background-color: var(--register-login-btn-1-bg-color);
+  color:var(--register-login-btn-color);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  cursor: pointer;
+}
+
+.registerLoginButton{
+  background-color: var(--register-login-btn-2-bg-color);
+}
+
+@media only screen and (max-width: 720px) {
+  .register{
+    height: calc(140vh - 50px);
+  }
+  .registerWrapper{
+    flex-direction: column;
+  }
+  .registerRight{
+    align-items: center;
+    margin-top: 70px;
+  }
+}
