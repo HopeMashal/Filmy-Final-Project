@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 21px;
+  position: fixed;
+  z-index: 100;
 }
 .logo-container{
   display: flex;

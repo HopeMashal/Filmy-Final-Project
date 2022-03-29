@@ -43,3 +43,8 @@ a {
   text-decoration: none !important;
   color: inherit !important;
 }
+
+.container {
+  max-width: 1660px;
+  margin: auto;
+}
