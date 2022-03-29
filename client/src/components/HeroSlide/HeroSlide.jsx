@@ -12,6 +12,9 @@ import apiConfig from '../../apis/apiConfig';
 
 import './heroSlide.css';
 
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+
 const HeroSlide = () => {
 
   SwiperCore.use([Autoplay]);
