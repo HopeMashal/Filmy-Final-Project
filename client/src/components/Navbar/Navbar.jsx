@@ -1,9 +1,7 @@
-import React,{useState,useContext,useRef, useEffect} from 'react';
+import React,{useState,useContext, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
-import { useHistory } from 'react-router';
 
-import {BiSearchAlt2} from 'react-icons/bi'
 import {BsFillMoonStarsFill , BsFillSunFill} from 'react-icons/bs'
 
 import { useTranslation } from 'react-i18next'
@@ -51,12 +49,10 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
 )
 
 export default function Navbar() {
-  const {user} = useContext(AuthContext)
+  const {user} = useContext(AuthContext);
   const [shortUser,setShortUser]=useState();
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const moviename = useRef();
-  const history = useHistory();
 
   const currentLanguageCode = cookies.get('i18next') || 'en'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
@@ -92,10 +88,6 @@ export default function Navbar() {
     localStorage.setItem("user", null)
     window.location.reload();
   }
-  const searchClick = ()=>{
-    const movieSearch =moviename.current.value;
-    history.push(`/search/${movieSearch}`)
-  }
   
 	const handleClickNav = () => {
 		setOpen(!open);
@@ -129,12 +121,6 @@ export default function Navbar() {
       {
         user?(
           <>
-            <div className="topbarCenter">
-              <div className="searchbar">
-                <BiSearchAlt2 className='searchIcon' onClick={searchClick}/>
-                <input placeholder={t('search-move')} className='searchInput' ref={moviename}/>
-              </div>
-            </div>
             <ul>
               <input type="checkbox" id="checkbox_toggle" onClick={handleClickNav}/>
               <label htmlFor="checkbox_toggle" className="check-menu">&#9776;</label>
@@ -145,12 +131,17 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="/popular" onClick={closeMenu}>
-                    {t('popular-text')}
+                  <Link className="nav-link" to="/movie" onClick={closeMenu}>
+                    {t('movie-text')}
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link user-name" to="/profile" onClick={closeMenu}>
+                  <Link className="nav-link" to="/tv" onClick={closeMenu}>
+                    {t('tv-series-text')}
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link user-name" to="/" onClick={closeMenu}> 
                     {shortUser}
                   </Link>
                 </li>
@@ -159,7 +150,7 @@ export default function Navbar() {
                     {t('logout-text')}
                   </Link>
                 </li>
-                <li className='dark-light-mode'>
+                <li className='dark-light-mode' onClick={closeMenu}>
                   {
                     darkMode ? 
                       <BsFillSunFill onClick={() => setDarkMode(!darkMode)}/> 
