@@ -5,6 +5,7 @@ import './input.css';
 const Input = props => {
     return (
         <input
+            className='inputSearch'
             type={props.type}
             placeholder={props.placeholder}
             value={props.value}

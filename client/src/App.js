@@ -23,7 +23,7 @@ function App() {
     <Router>
       <Navbar/>
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           {user ? <Home/> : <Register/>}
         </Route>
         <Route path="/login">
@@ -43,8 +43,8 @@ function App() {
         </Route>
         <Route path='/:category'>
           {user ? <Catalog/> : <Register/>}
-        </Route>
-        {/* <Route exact path="/">
+        </Route> */}
+        <Route exact path="/">
           <Home/>
         </Route>
         <Route path="/login">
@@ -64,7 +64,7 @@ function App() {
         </Route>
         <Route path='/:category'>
           <Catalog/>
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );

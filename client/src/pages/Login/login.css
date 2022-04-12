@@ -1,6 +1,6 @@
 .login{
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: 100vh;
   background-color: var(--register-login-bg-color);
   display: flex;
   align-items: center;
@@ -108,14 +108,19 @@
 }
 
 @media only screen and (max-width: 720px) {
-  .login{
-    height: calc(140vh - 50px);
-  }
   .loginWrapper{
     flex-direction: column;
+    width: 90%;
   }
   .loginRight{
     align-items: center;
     margin-top: 70px;
+    flex: 0.5;
+  }
+  .loginLeft{
+    flex: 0.5;
+  }
+  .loginBox{
+    width: 100%;
   }
 }
