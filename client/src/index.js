@@ -21,7 +21,6 @@ i18next
       order: ['path', 'cookie', 'htmlTag'],
       caches: ['cookie'],
     },
-    // react: { useSuspense: false },
     backend: {
       loadPath: '/assets/languages/{{lng}}/translation.json',
     },

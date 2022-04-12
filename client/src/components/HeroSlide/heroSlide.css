@@ -91,22 +91,21 @@
   transform: scale(1);
 }
 
-.heroSlideItem.active > .heroSlideItemContent > .heroSlideItemContentInfo .btns,
-.title,
-.overview{
+.heroSlideItem.active > .heroSlideItemContent > .heroSlideItemContentInfo .title {
   opacity: 1;
   transform: translateY(0);
-}
-
-.heroSlideItem.active > .heroSlideItemContent > .heroSlideItemContentInfo .title {
   transition-delay: 0.3s, 0.3s;
 }
 
 .heroSlideItem.active > .heroSlideItemContent > .heroSlideItemContentInfo .overview {
+  opacity: 1;
+  transform: translateY(0);
   transition-delay: 0.6s, 0.6s;
 }
 
 .heroSlideItem.active > .heroSlideItemContent > .heroSlideItemContentInfo .btns {
+  opacity: 1;
+  transform: translateY(0);
   transition-delay: 0.9s, 0.9s;
 }
 
