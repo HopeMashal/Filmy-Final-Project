@@ -21,5 +21,10 @@
   "change-pass":"تغيير كلمة السر",
   "details":"التفاصيل",
   "load-more":"تحميل المزيد",
-  "enter-keyword":"أدخل الكلمة المفتاحية"
+  "enter-keyword":"أدخل الكلمة المفتاحية",
+  "view-more":"عرض المزيد",
+  "trending-movies":"الأفلام الرائجة",
+  "top-rated-movies":"الأفلام الأعلى تقيماً",
+  "trending-tv":"المسلسلات الرائجة",
+  "top-rated-tv":"المسلسلات الأعلى تقيماً"
 }

@@ -21,5 +21,10 @@
   "change-pass":"Change Password",
   "details":"Details",
   "load-more":"Load more",
-  "enter-keyword":"Enter keyword"
+  "enter-keyword":"Enter keyword",
+  "view-more":"View more",
+  "trending-movies":"Trending Movies",
+  "top-rated-movies":"Top Rated Movies",
+  "trending-tv":"Trending TV",
+  "top-rated-tv":"Top Rated TV"
 }
