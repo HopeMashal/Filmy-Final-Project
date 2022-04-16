@@ -15,9 +15,11 @@
   "enter-repeat-pass":"Repeat Your Password",
   "forgot-pass-text":"Forgot Password?",
   "create-acc-text":"Create a New Account",
-  "search-move":"Search for movies",
+  "search":"Search",
   "enter-new-password":"Enter Your New Password",
   "enter-new-repeat-pass":"Repeat Your New Password",
   "change-pass":"Change Password",
-  "details":"Details"
+  "details":"Details",
+  "load-more":"Load more",
+  "enter-keyword":"Enter keyword"
 }

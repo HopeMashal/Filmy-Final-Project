@@ -15,9 +15,11 @@
   "enter-repeat-pass":"חזור על הסיסמה שלך",
   "forgot-pass-text":"שכחת סיסמה?",
   "create-acc-text":"צור חשבון חדש",
-  "search-move":"חפש סרטים ",
+  "search":"חפש",
   "enter-new-password":"הזן את הסיסמה החדשה שלך",
   "enter-new-repeat-pass":"חזור על הסיסמה החדשה שלך",
   "change-pass":"שנה סיסמה",
-  "details":"פרטים"
+  "details":"פרטים",
+  "load-more":"להעמיס עוד",
+  "enter-keyword":"הכנס מילת מפתח"
 }

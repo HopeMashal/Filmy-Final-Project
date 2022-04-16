@@ -15,9 +15,11 @@
   "enter-repeat-pass":"كرر كلمة السر مجدداً",
   "forgot-pass-text":"نسيت كلمة السر؟",
   "create-acc-text":"انشاء حساب جديد",
-  "search-move":"ابحث عن الأفلام",
+  "search":"ابحث",
   "enter-new-password":"أدخل كلمة السر الجديدة",
   "enter-new-repeat-pass":"كرر كلمة السر الجديدة مجدداً",
   "change-pass":"تغيير كلمة السر",
-  "details":"التفاصيل"
+  "details":"التفاصيل",
+  "load-more":"تحميل المزيد",
+  "enter-keyword":"أدخل الكلمة المفتاحية"
 }

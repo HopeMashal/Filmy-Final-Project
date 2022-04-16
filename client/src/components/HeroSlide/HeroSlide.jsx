@@ -14,29 +14,7 @@ import './heroSlide.css';
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
-import { useTranslation } from 'react-i18next'
-import cookies from 'js-cookie'
-
-const languages = [
-    {
-      code: 'en',
-      name: 'English',
-      country_code: 'gb',
-    },
-    {
-      code: 'ar',
-      name: 'العربية',
-      dir: 'rtl',
-      country_code: 'sa',
-    },
-    {
-      code: 'hr',
-      name: 'עִברִית',
-      dir: 'rtl',
-      country_code: 'il',
-    },
-  ]
-  
+import { useTranslation } from 'react-i18next' 
 
 const HeroSlide = () => {
 
@@ -81,16 +59,7 @@ const HeroSlide = () => {
 }
 
 const HeroSlideItem = props => {
-
-  const currentLanguageCode = cookies.get('i18next') || 'en'
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
-
-  useEffect(() => {
-    console.log('Setting page stuff')
-    document.body.dir = currentLanguage.dir || 'ltr'
-    document.title = t('app_title')
-  }, [currentLanguage, t])
 
   let hisrory = useHistory();
 

@@ -9,6 +9,8 @@ import Input from '../Input/Input'
 
 import tmdbApi, { category, movieType, tvType } from '../../apis/apiTMDB';
 
+import { useTranslation } from 'react-i18next'
+
 const MovieGrid = props => {
 
     const [items, setItems] = useState([]);
@@ -17,6 +19,8 @@ const MovieGrid = props => {
     const [totalPage, setTotalPage] = useState(0);
 
     const { keyword } = useParams();
+
+    const { t } = useTranslation()
 
     useEffect(() => {
         const getList = async () => {
@@ -79,7 +83,7 @@ const MovieGrid = props => {
             {
                 page < totalPage ? (
                     <div className="movieGridLoadmore">
-                        <OutlineButton className="small" onClick={loadMore}>Load more</OutlineButton>
+                        <OutlineButton className="small" onClick={loadMore}>{t('load-more')}</OutlineButton>
                     </div>
                 ) : null
             }
@@ -92,6 +96,8 @@ const MovieSearch = props => {
     const history = useHistory();
 
     const [keyword, setKeyword] = useState(props.keyword ? props.keyword : '');
+
+    const { t } = useTranslation()
 
     const goToSearch = useCallback(
         () => {
@@ -119,11 +125,11 @@ const MovieSearch = props => {
         <div className="movieSearch">
             <Input
                 type="text"
-                placeholder="Enter keyword"
+                placeholder={t("enter-keyword")}
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
             />
-            <Button className="small" onClick={goToSearch}>Search</Button>
+            <Button className="small" onClick={goToSearch}>{t('search')}</Button>
         </div>
     )
 }
