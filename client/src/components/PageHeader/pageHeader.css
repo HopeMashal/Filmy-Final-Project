@@ -1,12 +1,12 @@
 .pageHeader {
-  padding: 8rem 0 2rem;
+  padding: 14rem 0 2rem 0;
   text-align: center;
   margin-bottom: 2rem;
   position: relative;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../../../public/assets/bg.jpg');
+  background-image: linear-gradient(var(--bg-color1-catalog), var(--bg-color2-catalog)), url('../../../public/assets/bg-movies.jpg');
 }
 
 .pageHeader  h2 {

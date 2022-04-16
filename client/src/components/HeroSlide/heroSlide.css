@@ -3,6 +3,26 @@
   color:var(--register-login-btn-color);
 }
 
+.SomeDetails {
+  padding: 5px 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  border-radius: 20px;
+  background-color: rgba(87, 87, 87, 0.482);
+}
+
+.voteAvg{
+  width: 60px;
+}
+
+.PDetails{
+  display: flex;
+  flex-direction: row;
+}
+
 .heroSlideItem {
   padding: 9rem 0;
   width: 100%;
