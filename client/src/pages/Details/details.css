@@ -30,7 +30,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 1260px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-top: -80vh;
@@ -52,7 +52,7 @@
 
 .movieContentInfo {
   width: 70%;
-  padding-left: 2rem;
+  padding: 0 2rem;
   position: relative;
 }
 
@@ -80,12 +80,12 @@
 
 .genresItem {
   padding: 0.5rem 1.5rem;
-  border: 2px solid white;
+  border: 2px solid var(--register-login-btn-color);
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 600;
   background-color: black;
-  color:white;
+  color:var(--register-login-btn-color);
   font-family: 'Inconsolata', monospace;
 }
 
@@ -107,6 +107,12 @@
 
 .castsItemName {
   font-size: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section .sectionHeader h2{
+  font-weight:700;
 }
 
 .video {
@@ -114,11 +120,7 @@
 }
 
 .videoTitle {
-  margin: 3rem 2rem 1.5rem 2rem;
-}
-
-.videoTitle h2{
-  font-weight: 600;
+  margin: 1.5rem 2rem 1.5rem 2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,5 +133,23 @@
   }
   .videoTitle {
     margin: 1.5rem 0rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 770px){
+  .banner{
+    height: 80vh;
+  }
+  .movieContent{
+    margin-top: -60vh;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 950px){
+  .banner{
+    height: 60vh;
+  }
+  .movieContent{
+    margin-top: -40vh;
   }
 }

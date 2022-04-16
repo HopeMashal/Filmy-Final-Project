@@ -96,7 +96,7 @@ const HeroSlideItem = props => {
                   </div>
               </div>
               <div className="heroSlideItemContentPoster">
-                  <img src={apiConfig.w500Image(item.poster_path)} alt="" />
+                  <img src={apiConfig.w500Image(item.poster_path || item.backdrop_path)} alt="" />
               </div>
           </div>
       </div>
