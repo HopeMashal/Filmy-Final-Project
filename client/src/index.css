@@ -27,6 +27,10 @@ body {
 
   --bg-color1-catalog:rgba(214, 214, 214, 0.7);
   --bg-color2-catalog:rgba(255, 255, 255, 0.288);
+
+  --input-bg:#e4e4e4;
+
+  --catalog-title-color:rgb(109, 109, 109);
 }
 
 body.dark{
@@ -45,6 +49,10 @@ body.dark{
   
   --bg-color1-catalog:rgba(122, 122, 122, 0.842);
   --bg-color2-catalog:rgba(189, 189, 189, 0.288);
+
+  --input-bg:#d7d7d7;
+
+  --catalog-title-color:rgb(89,89,89);
 }
 
 a {

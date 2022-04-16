@@ -8,7 +8,7 @@
   margin-bottom: 1rem;
 }
 
-.movieCard .btn {
+.movieCardBtn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,11 +29,15 @@
   border-radius: 30px;
 }
 
+.movieCardTitle{
+  text-align: center;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .movieCard:hover::before {
     opacity: 0.8;
   }
-  .movieCard:hover .btn {
+  .movieCard:hover .movieCardBtn {
     transform: translate(-50%, -50%) scale(1);
   }
 }

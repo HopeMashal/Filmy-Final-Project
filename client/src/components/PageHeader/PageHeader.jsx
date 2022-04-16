@@ -5,7 +5,7 @@ import './pageHeader.css';
 const PageHeader = props => {
     return (
         <div className="pageHeader">
-            <h2>{props.children}</h2>
+            <h1>{props.children}</h1>
         </div>
     );
 }

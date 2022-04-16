@@ -20,11 +20,11 @@ const MovieCard = props => {
     return (
         <Link to={link}>
             <div className="movieCard" style={{backgroundImage: `url(${bg})`}}>
-                <Button>
-                    <i className="bx bx-play"></i>
+                <Button className="movieCardBtn">
+                    <label>&#9654;</label>
                 </Button>
             </div>
-            <h3>{item.title || item.name}</h3>
+            <h4 className='movieCardTitle'>{item.title || item.name}</h4>
         </Link>
     );
 }

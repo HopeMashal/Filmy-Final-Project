@@ -9,10 +9,11 @@
   background-image: linear-gradient(var(--bg-color1-catalog), var(--bg-color2-catalog)), url('../../../public/assets/bg-movies.jpg');
 }
 
-.pageHeader  h2 {
+.pageHeader  h1 {
   position: relative;
   z-index: 99;
-  color: white;
+  color: var(--catalog-title-color);
+  font-family: 'Faster One', cursive;
 }
 
 .pageHeader::after {
@@ -22,5 +23,5 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, var(--register-login-bg-color), rgba(0, 0, 0, 0));
 }
