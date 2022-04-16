@@ -1,5 +1,5 @@
 .banner {
-  height: 50vh;
+  height: 100vh;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -23,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, var(--register-login-bg-color), rgba(0, 0, 0, 0));
 }
 
 .movieContent {
@@ -33,13 +33,13 @@
   max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -200px;
+  margin-top: -80vh;
   position: relative;
   padding: 0 2rem;
 }
 
 .movieContentPoster {
-      flex: 1;
+  flex: 1;
 }
 
 .movieContentPosterImg {
@@ -60,12 +60,21 @@
   margin-bottom: 2rem;
 }
 
-.movieContentInfo.title {
+.titleDetails {
   font-size: 4rem;
+  font-weight: 700;
   line-height: 1;
+  font-family: 'Inconsolata', monospace;
+  color:var(--register-login-btn-color);
 }
 
-.movieContentInfo.genres > * ~ * {
+.overviewDetails{
+  font-weight: 700;
+  text-align: justify;
+  color:var(--register-login-btn-color);
+}
+
+.genres > * ~ * {
   margin-left: 0.5rem;
 }
 
@@ -76,12 +85,18 @@
   font-size: 0.8rem;
   font-weight: 600;
   background-color: black;
+  color:white;
+  font-family: 'Inconsolata', monospace;
 }
 
 .casts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 10px;
+}
+
+.cast .sectionHeader h2{
+  color:var(--register-login-btn-color);
 }
 
 .castsItemImg {
@@ -99,7 +114,11 @@
 }
 
 .videoTitle {
-  margin-bottom: 1.5rem;
+  margin: 3rem 2rem 1.5rem 2rem;
+}
+
+.videoTitle h2{
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {
@@ -109,5 +128,8 @@
   .movieContentInfo{
     width: 100%;
     padding-left: 0;
+  }
+  .videoTitle {
+    margin: 1.5rem 0rem;
   }
 }

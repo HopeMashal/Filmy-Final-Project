@@ -10,11 +10,15 @@ import VideoList from './VideoList';
 
 import MovieList from '../../components/MovieList/MovieList';
 
+import { useTranslation } from 'react-i18next'
+
 const Detail = () => {
 
     const { category, id } = useParams();
 
     const [item, setItem] = useState(null);
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         const getDetail = async () => {
@@ -36,7 +40,7 @@ const Detail = () => {
                                 <div className="movieContentPosterImg" style={{backgroundImage: `url(${apiConfig.originalImage(item.poster_path || item.backdrop_path)})`}}></div>
                             </div>
                             <div className="movieContentInfo">
-                                <h1 className="title">
+                                <h1 className="titleDetails">
                                     {item.title || item.name}
                                 </h1>
                                 <div className="genres">
@@ -46,7 +50,7 @@ const Detail = () => {
                                         ))
                                     }
                                 </div>
-                                <p className="overview">{item.overview}</p>
+                                <p className="overviewDetails">{item.overview}</p>
                                 <div className="cast">
                                     <div className="sectionHeader">
                                         <h2>Casts</h2>
