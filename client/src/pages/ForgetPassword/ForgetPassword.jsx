@@ -1,31 +1,10 @@
-import React, {useRef,useState,useEffect} from 'react'
+import React, {useRef,useState} from 'react'
 import { useHistory } from 'react-router';
 import BackEndAPI from '../../apis/api';
 
 import { useTranslation } from 'react-i18next'
-import cookies from 'js-cookie'
 
 import './forgetPassword.css'
-
-const languages = [
-  {
-    code: 'en',
-    name: 'English',
-    country_code: 'gb',
-  },
-  {
-    code: 'ar',
-    name: 'العربية',
-    dir: 'rtl',
-    country_code: 'sa',
-  },
-  {
-    code: 'hr',
-    name: 'עִברִית',
-    dir: 'rtl',
-    country_code: 'il',
-  },
-]
 
 export default function ForgetPassword() {
   const history = useHistory();
@@ -34,15 +13,7 @@ export default function ForgetPassword() {
   const passwordAgain = useRef();
   const [curruser,setCurrUser] = useState(null);
 
-  const currentLanguageCode = cookies.get('i18next') || 'en'
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
-
-  useEffect(() => {
-    console.log('Setting page stuff')
-    document.body.dir = currentLanguage.dir || 'ltr'
-    document.title = t('app_title')
-  }, [currentLanguage, t])
   
   const handleClick= async (e)=>{
     e.preventDefault();

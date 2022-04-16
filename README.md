@@ -16,7 +16,7 @@ The main point of our project is to <!-- Fixed it  -->
     - LogIn Page
     - Register Page
     - Forgot Password Page
-    - Search Page
+    - Category Page
     - Film Page
 
   > **Home Page**
@@ -54,7 +54,7 @@ The main point of our project is to <!-- Fixed it  -->
 
 ***
 
-- ## Innitial Layout
+- ## Initial Layout
     - Home Page
 
       ![Home Page](https://github.com/HopeMashal/Filmy-Final-Project/blob/master/README-Pictures/homepage.PNG)
@@ -74,3 +74,16 @@ The main point of our project is to <!-- Fixed it  -->
       ![Film Page Click](https://github.com/HopeMashal/Filmy-Final-Project/blob/master/README-Pictures/filmpageclick.PNG)
 
       ![Full Screen](https://github.com/HopeMashal/Filmy-Final-Project/blob/master/README-Pictures/fullscreen.PNG)
+
+- ## Final Layout
+    - Home Page
+
+    - LogIn Page
+
+    - Register Page
+
+    - Forgot Password Page
+
+    - Category Page
+
+    - Film Page

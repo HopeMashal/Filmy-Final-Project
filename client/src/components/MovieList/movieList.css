@@ -1,0 +1,15 @@
+.movieList .swiper-slide{
+  width: 15%;
+}
+
+@media only screen and (max-width: 600px) {
+  .movieList .swiper-slide {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .movieList .swiper-slide {
+    width: 30%;
+  }
+}

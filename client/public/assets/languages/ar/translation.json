@@ -15,8 +15,18 @@
   "enter-repeat-pass":"كرر كلمة السر مجدداً",
   "forgot-pass-text":"نسيت كلمة السر؟",
   "create-acc-text":"انشاء حساب جديد",
-  "search-move":"ابحث عن الأفلام",
+  "search":"ابحث",
   "enter-new-password":"أدخل كلمة السر الجديدة",
   "enter-new-repeat-pass":"كرر كلمة السر الجديدة مجدداً",
-  "change-pass":"تغيير كلمة السر"
+  "change-pass":"تغيير كلمة السر",
+  "details":"التفاصيل",
+  "load-more":"تحميل المزيد",
+  "enter-keyword":"أدخل الكلمة المفتاحية",
+  "view-more":"عرض المزيد",
+  "trending-movies":"الأفلام الرائجة",
+  "top-rated-movies":"الأفلام الأعلى تقيماً",
+  "trending-tv":"المسلسلات التلفزونية الرائجة",
+  "top-rated-tv":"المسلسلات التلفزونية الأعلى تقيماً",
+  "casts":"الممثلين",
+  "similar":"مشابه"
 }

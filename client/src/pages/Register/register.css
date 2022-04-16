@@ -1,7 +1,6 @@
 .register{
   width: 100vw;
-  height: calc(100vh - 50px);
-  background-color: var(--register-login-bg-color);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,14 +88,19 @@
 }
 
 @media only screen and (max-width: 720px) {
-  .register{
-    height: calc(140vh - 50px);
-  }
   .registerWrapper{
     flex-direction: column;
+    width: 90%;
   }
   .registerRight{
     align-items: center;
     margin-top: 70px;
+    flex: 0.5;
+  }
+  .registerLeft{
+    flex: 0.5;
+  }
+  .registerBox{
+    width: 100%;
   }
 }

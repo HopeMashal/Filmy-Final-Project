@@ -1,13 +1,13 @@
-/* import { useContext } from "react"; */
+import { useContext } from "react";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  /* Redirect, */
+  Redirect,
 } from "react-router-dom";
 
-/* import { AuthContext } from "./context/AuthContext"; */
+import { AuthContext } from "./context/AuthContext";
 
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
@@ -17,15 +17,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Catalog from "./pages/Catalog/Catalog";
 import Details from "./pages/Details/Details";
 
-import './App.css';
-
 function App() {
-  /* const {user}=useContext(AuthContext) */
+  const {user}=useContext(AuthContext)
   return (
     <Router>
       <Navbar/>
       <Switch>
-        {/* <Route exact path="/">
+        <Route exact path="/">
           {user ? <Home/> : <Register/>}
         </Route>
         <Route path="/login">
@@ -45,27 +43,6 @@ function App() {
         </Route>
         <Route path='/:category'>
           {user ? <Catalog/> : <Register/>}
-        </Route>*/}
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <Route path="/register">
-          <Register/>
-        </Route>
-        <Route path="/forget">
-          <ForgetPassword/>
-        </Route>
-        <Route path='/:category/search/:keyword'>
-          <Catalog/>
-        </Route>
-        <Route path='/:category/:id'>
-          <Details/>
-        </Route>
-        <Route path='/:category'>
-          <Catalog/>
         </Route>
       </Switch>
     </Router>

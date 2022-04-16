@@ -15,8 +15,18 @@
   "enter-repeat-pass":"חזור על הסיסמה שלך",
   "forgot-pass-text":"שכחת סיסמה?",
   "create-acc-text":"צור חשבון חדש",
-  "search-move":"חפש סרטים ",
+  "search":"חפש",
   "enter-new-password":"הזן את הסיסמה החדשה שלך",
   "enter-new-repeat-pass":"חזור על הסיסמה החדשה שלך",
-  "change-pass":"שנה סיסמה"
+  "change-pass":"שנה סיסמה",
+  "details":"פרטים",
+  "load-more":"להעמיס עוד",
+  "enter-keyword":"הכנס מילת מפתח",
+  "view-more":"ראה עוד",
+  "trending-movies":"סרטים פופולריים",
+  "top-rated-movies":"הסרטים המדורגים ביותר",
+  "trending-tv":"סדרת טלוויזיה פופולרית",
+  "top-rated-tv":"סדרת טלוויזיה בדירוג הגבוה ביותר",
+  "casts":"שחקנים",
+  "similar":"דוֹמֶה"
 }
