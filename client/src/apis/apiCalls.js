@@ -1,11 +1,12 @@
 import BackEndAPI from "./api";
+import { loginFailure, loginStart, loginSuccess } from "../context/AuthAction";
 
-export const loginCall = async (userCredential, dispatch) => {
-  dispatch({ type: "LOGIN_START" });
+export const login = async (user, dispatch) => {
+  dispatch(loginStart());
   try {
-    const res = await BackEndAPI.post("/users/login", userCredential);
-    dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+    const res = await BackEndAPI.post("/users/login", user);
+    dispatch(loginSuccess(res.data));
   } catch (err) {
-    dispatch({ type: "LOGIN_FAILURE", payload: err });
+    dispatch(loginFailure());
   }
 };

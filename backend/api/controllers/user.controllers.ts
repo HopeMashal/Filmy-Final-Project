@@ -50,12 +50,12 @@ export const login = async (req: Request, res: Response) => {
       const tokenUser = await User.findOne({ 'tokens.token': token });
       if (!tokenUser) {
         return res.status(400).send();
-      } else return res.send({ user: tokenUser });
+      } else return res.send(tokenUser);
     }
 
     const user = await User.findByCredentials(req.body.email, req.body.password);
     const genToken = await user.generateAuthToken();
-    res.send({ user, genToken });
+    res.send(user);
   } catch (e) {
     if (e instanceof Error) {
       res.status(400).send(e.message);

@@ -52,13 +52,11 @@ const userSchema: mongoose.Schema<I_UserDocument> = new mongoose.Schema({
   },
   accessLevel: {
     type: Number,
-    required: true,
   },
   tokens: [
     {
       token: {
         type: String,
-        required: true,
       },
     },
   ],
