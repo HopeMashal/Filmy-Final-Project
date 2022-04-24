@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {AuthContextProvider} from './context/AuthContext'
 
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
@@ -35,7 +36,9 @@ const loadingMarkup = (
 ReactDOM.render(
   <Suspense fallback={loadingMarkup}>
     <React.StrictMode>
-      <App />
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
     </React.StrictMode>
   </Suspense>,
   document.getElementById('root')

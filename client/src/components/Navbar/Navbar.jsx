@@ -1,6 +1,7 @@
 import React,{useState,useContext, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { logout } from "../../context/AuthAction";
 
 import {BsFillMoonStarsFill , BsFillSunFill} from 'react-icons/bs'
 
@@ -53,6 +54,7 @@ export default function Navbar() {
   const [shortUser,setShortUser]=useState();
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const { dispatch } = useContext(AuthContext);
 
   const currentLanguageCode = cookies.get('i18next') || 'en'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
@@ -83,11 +85,6 @@ export default function Navbar() {
     const json = JSON.stringify(darkMode);
     localStorage.setItem("site-dark-mode", json);
   }, [darkMode]);
-  
-  const handleClick =() =>{
-    localStorage.setItem("user", null)
-    window.location.reload();
-  }
   
 	const handleClickNav = () => {
 		setOpen(!open);
@@ -146,7 +143,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="/" onClick={handleClick}>
+                  <Link className="nav-link" to="/" onClick={() => dispatch(logout())}>
                     {t('logout-text')}
                   </Link>
                 </li>

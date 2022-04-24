@@ -1,0 +1,16 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended"],
+    "jsRules": {},
+    "rules": {
+      "trailing-comma": true,
+      "no-console": true
+    },
+    "rulesDirectory": [],
+    "key": "cmd+k f",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "source.fixAll.tslint",
+      "apply": "first"
+    }
+  }

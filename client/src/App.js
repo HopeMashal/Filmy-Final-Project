@@ -13,6 +13,7 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import ForgetPassword from "./pages/ForgetPassword/ForgetPassword";
+import RestPassword from "./pages/RestPassword/RestPassword";
 import Navbar from "./components/Navbar/Navbar";
 import Catalog from "./pages/Catalog/Catalog";
 import Details from "./pages/Details/Details";
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/forget">
           {user ? <Redirect to="/"/> :<ForgetPassword/>}
+        </Route> 
+        <Route path="/rest/:token">
+          {user ? <Redirect to="/"/> :<RestPassword/>}
         </Route> 
         <Route path='/:category/search/:keyword'>
           {user ? <Catalog/> : <Register/>}
