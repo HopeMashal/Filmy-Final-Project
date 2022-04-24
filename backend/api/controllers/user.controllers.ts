@@ -2,7 +2,6 @@ import User from '../../models/user';
 import express, { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
-import validator from 'validator';
 import { sendResetPasswordEmail } from '../../src/emails/user';
 import { getUserData, getUsersData } from '../../services/user.services';
 const app = express();
