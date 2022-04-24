@@ -24,7 +24,7 @@ export default function RestPassword() {
         const userInf ={
           password : password.current.value
         }
-        await BackEndAPI.get("/users/resetPassword/"+token , userInf);
+        await BackEndAPI.put("/users/resetPassword/"+token , userInf);
         history.push("/login")
       } catch (e){
         console.log(e)

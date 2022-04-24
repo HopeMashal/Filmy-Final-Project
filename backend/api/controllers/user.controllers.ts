@@ -123,6 +123,7 @@ export const sendResetLink = async (req: Request, res: Response, next) => {
     }
     const token = await user.generateAuthToken();
     await sendResetPasswordEmail(user,token);
+    console.log(`${process.env.DOMAIN}/rest/${token}`)
     res.status(200).send({ message: 'Password reset link has been successfully sent to your inbox' });
   } catch (e: any) {
     res.status(500).send(e);

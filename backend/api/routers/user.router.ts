@@ -17,7 +17,7 @@ import authentication from '../../middleware/authentication';
 const userRouter = express.Router();
 
 userRouter.post('/users/forgotPassword', sendResetLink);
-userRouter.get(`/users/resetPassword/:token`, resetPassword);
+userRouter.put(`/users/resetPassword/:token`, resetPassword);
 userRouter.post('/users/login', login);
 userRouter.post('/users/logout', authentication, logout);
 userRouter.post('/users/logoutAll', authentication, logoutAll);
