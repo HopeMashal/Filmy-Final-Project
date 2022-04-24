@@ -1,5 +1,4 @@
-import React, {useRef,useState} from 'react'
-import { useHistory } from 'react-router';
+import React, {useRef} from 'react'
 import BackEndAPI from '../../apis/api';
 
 import { useTranslation } from 'react-i18next'
@@ -7,35 +6,23 @@ import { useTranslation } from 'react-i18next'
 import './forgetPassword.css'
 
 export default function ForgetPassword() {
-  const history = useHistory();
-  const username = useRef();
-  const password = useRef();
-  const passwordAgain = useRef();
-  const [curruser,setCurrUser] = useState(null);
+  const useremail = useRef();
 
   const { t } = useTranslation()
   
   const handleClick= async (e)=>{
     e.preventDefault();
-    if(passwordAgain.current.value !== password.current.value){
-      passwordAgain.current.setCustomValidity("PASSWORDS DONT MATCH!!!")
-    } else {
-      const user =username.current.value;
-
+      const email =useremail.current.value;
       try{
-        const res=await BackEndAPI.get("/users?username="+user); //! Fixed it
-        setCurrUser(res.data)
-        const Id=curruser._id;
         const userInf ={
-          userId : Id,
-          password : password.current.value
+          email : email,
         }
-        await BackEndAPI.put("/users/"+Id , userInf); //! Fixed it
-        history.push("/login")
+        await BackEndAPI.post("/users/forgotPassword" , userInf); 
+        const box=document.querySelector('.forgetRight');
+        box.innerHTML=`<div class='forgetBox' style='text-align: center;'><h1>${t('check-email')}</h1></div>`
       } catch (e){
         console.log(e)
       }
-    }
   }
 
   return (
@@ -54,10 +41,10 @@ export default function ForgetPassword() {
         </div>
         <div className="forgetRight">
           <form className="forgetBox" onSubmit={handleClick}>
-            <input placeholder={t('enter-name')} required ref={username}  className='forgetInput'/>
-            <input type="password" placeholder={t('enter-new-password')} minLength="8" required ref={password} className='forgetInput'/>
-            <input type="password" placeholder={(t('enter-new-repeat-pass'))} required ref={passwordAgain} className='forgetInput'/>
-            <button className='forgetButton' type="submit">{t('change-pass')}</button>
+            <h1 style={{'text-align': 'center'}}>{t('password-reset')}</h1>
+            <input placeholder={t('enter-email')} required ref={useremail}  className='forgetInput'/>
+            <h6>{t('share-email')}</h6>
+            <button className='forgetButton' type="submit">{t('submit')}</button>
           </form>
         </div>
       </div>

@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
 import validator from 'validator';
-import { sendEmail } from '../../src/emails/user';
+import { sendResetPasswordEmail } from '../../src/emails/user';
 import { getUserData, getUsersData } from '../../services/user.services';
 const app = express();
 app.use(express.json());
@@ -123,17 +123,7 @@ export const sendResetLink = async (req: Request, res: Response, next) => {
       return res.status(404).send({ error: 'User not found' });
     }
     const token = await user.generateAuthToken();
-    const link = `${req.protocol}://localhost:8080/reset_password/${token}`;
-    await sendEmail(
-      email,
-      `${email}`,
-      'Filmy Password Reset',
-      `
-      <div>Click the link below to reset your password</div><br/>
-      <div>${link}</div>
-      `
-    );
-
+    await sendResetPasswordEmail(user,token);
     res.status(200).send({ message: 'Password reset link has been successfully sent to your inbox' });
   } catch (e: any) {
     res.status(500).send(e);
