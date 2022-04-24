@@ -1,18 +1,37 @@
 {
-  "name": "Filmy-Final-Project",
+  "name": "filmy-final-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon backend/src/index.ts",
+    "client": "cd client && cd src && npm start",
+    "startLocal": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./backend/src/index.ts",
+    "heroku-postbuild": "npm install --prefix client && npm run build-react"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
+    "@types/express-serve-static-core": "^4.17.28",
+    "@types/helmet": "^4.0.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.1",
+    "morgan": "^1.10.0",
     "nodemailer": "^6.7.3",
-    "path": "^0.12.7"
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "validator": "^13.7.0"
   }
 }
