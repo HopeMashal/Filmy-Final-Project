@@ -2,7 +2,7 @@
 - ## Project Idea
 A ReactJS and NodeJS project where we built a Movies App.
 
-The main point of our project is to find movies, read about the storylines, see the cast lists, see advertisements for movies, ratings, and other information about films. We have used NodeJS for the backend, where we saved the users' information on the mongoDB that contains the email, name, password. Also, we used the ReactJS for Frontend, we set the multi-language option, so that the user will be able to choose a language from three languages, which are English, Arabic or Hebrew. This option can only be applied to the application interface. As for the movie information, it will be displayed in English only because it is fetched from the API, so we can’t change the language in it because of the method we used. There is a dark light mode so that the user can choose the colors that they are most comfortable with. This project contains a login page, a register page and a password change page. The homepage displays the five most famous (top) movies ,the section below is divided into categories, whether it is movies or TV series, and you can see all the information and details and search for the movie or series that you’re interested in. 
+The main point of our project is to find movies/series, read about the storylines, see the cast lists, see advertisements for movies/series, ratings, and other information about movies/series. We have used NodeJS for the backend, where we saved the users' information on the mongoDB that contains the email, name, password. Also, we used the ReactJS for Frontend, we set the multi-language option, so that the user will be able to choose a language from three languages, which are English, Arabic or Hebrew. This option can only be applied to the application interface. As for the movie information, it will be displayed in English only because it is fetched from the API, so we can’t change the language in it because of the method we used. There is a dark light mode so that the user can choose the colors that they are most comfortable with. This project contains a login page, a register page and a password change page. The homepage displays the five most famous (top) movies ,the section below is divided into categories, whether it is movies or TV series, and you can see all the information and details and search for the movie or series that you’re interested in. 
 
 > *Website link:*
 **https://filmy-hope-omar-front.herokuapp.com** 
@@ -61,7 +61,7 @@ The main point of our project is to find movies, read about the storylines, see 
     - Film Page
 
   > **Home Page**
-    - All movies, new movies, movies you haven't finished and suggestions are shown according to your opinions/views
+    - All movies, new movies, the five most famous (top) movies, All TV series, new TV series
   
   > **Log In Page**
     - Log in to your account using email and password
@@ -70,15 +70,18 @@ The main point of our project is to find movies, read about the storylines, see 
     - Create a new account using account name and email and password
 
   >  **Forgot Password Page**
-    - You can change your password using account name
+    - You can change your password using account email
 
   > **Film Page**
-    - Film Name
-    - Film Desc
-    - Film Cover Picture
+    - Movie/Series Name
+    - Movie/Series Desc
+    - Cast Lists
+    - Movie/Series Cover Picture
+    - Similar
+    - Advertisements for Movie/Series
 
   >  **Search Page**
-    - You can search to find movies
+    - You can search to find movie/series
 
   > **In general**
     - MongoDB
